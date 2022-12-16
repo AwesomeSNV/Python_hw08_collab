@@ -1,0 +1,29 @@
+{
+    "id": "1",
+    "last_name": "Иванов",
+    "first_name": "Иван",
+    "phone_num": "123-456",
+    "position": "Рабочий",
+    "salary": "40000"
+}{
+    "id": "2",
+    "last_name": "Петров",
+    "first_name": "Петр",
+    "phone_num": "234-567",
+    "position": "Бухгалтер",
+    "salary": "42000"
+}{
+    "id": "4",
+    "last_name": "Зайцев",
+    "first_name": "Михаил",
+    "phone_num": "245-765",
+    "position": "Руководитель",
+    "salary": "44000"
+}{
+    "id": "5",
+    "last_name": "Елкин",
+    "first_name": "Сергей",
+    "phone_num": "87-98",
+    "position": "рабочий",
+    "salary": "41500"
+}
