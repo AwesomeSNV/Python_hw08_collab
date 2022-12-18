@@ -10,6 +10,7 @@ def show_menu() -> int:
     print("7. Экспортировать данные в формате json")
     print("8. Экспортировать данные в формате cmv")
     print("0. Закончить работу")
+    #return int(input("Введите номер необходимого действия: "))
 
     position = int(input("Введите номер необходимого действия: "))
     while position<0 or position>8:

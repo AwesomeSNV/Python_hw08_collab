@@ -9,8 +9,6 @@ def read_database():
         for row in reader:
             db_list.append(row)
 
-    write_database(db_list)  # а нужеа ли эта строка?
-
     return db_list
 
 def write_database(data, path = "database.csv"):
@@ -22,10 +20,17 @@ def write_database(data, path = "database.csv"):
         for employee in data:
             writer.writerow({'id':employee['id'], 'last_name':employee['last_name'], 'first_name': employee['first_name'], 'phone_num': employee['phone_num'], 'position':employee['position'], 'salary': employee['salary']})
 
+def id_read():
+    with open('db_id.txt','r') as file:
+        id = int(file.readline())
+    return id    
 
+def id_write(id):
+    with open('db_id.txt','w') as file:
+        file.write(str(id))
 
 def add_employee(data):
-    id_count = 0
+    id_count = id_read()
     for employee in data:
         if int(employee['id'])>id_count:
             id_count = int(employee['id'])
@@ -41,9 +46,10 @@ def add_employee(data):
     data.append(new_employee)
 
     write_database(data)
+    id_write(id_count)
 
 def del_employee(data):
-    id_del = input("введите ID сотрудника для удаления записи")
+    id_del = input("введите ID сотрудника для удаления записи: ")
     flag = 0
     for employee in data:
         if id_del == employee['id']:
