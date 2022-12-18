@@ -1,11 +1,11 @@
 def print_employee(employee):
     print('\nID: ', employee["id"], ' \nФамилия: ', employee["last_name"], ' \nИмя: ', employee["first_name"],
-          ' \nномер телефона: ', employee['phone_num'], ' \nДолжность:', employee['position'], ' \nЗарплата:',
+          ' \nномер телефона: ', employee['phone_num'], ' \nДолжность: ', employee['position'], ' \nЗарплата: ',
           employee['salary'])
 
 
 def find_employee(data):
-    search_value = input("Введите данные для поиска: Id, имя или фамилию")
+    search_value = input("Введите данные для поиска: Id, имя или фамилию: ")
     flag = 0
     for employee in data:
         if search_value == employee["id"] or search_value == employee["first_name"] or search_value == employee["last_name"]:
